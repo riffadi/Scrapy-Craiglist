@@ -5,7 +5,7 @@ from scrapy import Request
 class MultiplePageSpider(scrapy.Spider):
     name = 'multiple_page'
     allowed_domains = ['craigslist.org']
-    start_urls = ['https://newyork.craigslist.org/search/egr//']
+    start_urls = ['https://newyork.craigslist.org/search/egr/']
 
     def parse(self, response):
         jobs = response.xpath('//p[@class="result-info"]')
