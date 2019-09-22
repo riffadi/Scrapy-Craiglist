@@ -32,4 +32,4 @@ class MultiplePageSpider(scrapy.Spider):
     	compensation = response.xpath('//p[@class="attrgroup"]/span[1]/b/text()').extract_first()
     	employment_type  = response.xpath('//p[@class="attrgroup"]/span[2]/b/text()').extract_first()
 
-    	yield{'URL': url, 'Title': title, 'Address':address, 'Description':description, 'Compensation':compensation, 'Employment Type':employment_type}
+    	yield{'Title' : title, 'URL' : url, 'Address' : address, 'Compensation' : compensation, 'Employment Type' : employment_type, 'Description' : description}
